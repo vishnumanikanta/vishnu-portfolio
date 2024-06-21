@@ -12,6 +12,10 @@
     --brand-color: #1f1f1f; /* Deep charcoal */
     --linear-back: linear-gradient(135deg, #1f1f1f 0%, #2c3e50 100%); /* Gradient from deep charcoal to dark blue */
 }
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     height: 100vh;
