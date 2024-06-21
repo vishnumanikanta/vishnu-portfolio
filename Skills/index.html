@@ -96,14 +96,22 @@
     </div>
 </head>
 <body>
-    <div class="header">
+  <div class="header">
     <ul>
         <li><a href="./vishnu-portfolio/index.html">Home</a></li>
-        <li><a  href="./vishnu-portfolio/Projects/portfolio.html">Projects</a></li>
-        <li><a  href="./Skills/index.html">Skills</a></li>
+        <li><a href="./vishnu-portfolio/Projects/portfolio.html">Projects</a></li>
+        <li><a href="./Skills/index.html">Skills</a></li>
         <li><a href="./resume.html">Resume</a></li>
     </ul>
-    </div>
+    <button onclick="goBack()">Go Back</button>
+</div>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+
     <div class="canvas">
         <div>
             <p id="me"><span class="i">I</span>'ve worked with a variety of programming languages, frameworks, and tools, which has aided me in completing my projects.</p>
