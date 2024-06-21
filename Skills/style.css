@@ -225,18 +225,21 @@
             flex-wrap: wrap;
             padding: 1rem 0;
         }
-  .share a {
+.share a {
     height: 2rem;  /* Decreased height */
     width: 2rem;   /* Decreased width */
     padding: 0.4rem;  /* Adjusted padding */
     text-align: center;
-    border-radius: 2rem;  /* Adjusted border-radius */
+    border-radius: 50%;  /* Adjusted border-radius */
     font-size: 1.2rem;  /* Adjusted font-size */
     margin-right: 0.4rem;  /* Adjusted margin-right */
     transition: .2s;
     background: rgb(230, 230, 230);
     color: #02094b;
     border: none;
+    display: flex;  /* Centering the icon */
+    align-items: center;  /* Centering the icon */
+    justify-content: center;  /* Centering the icon */
 }
 
 .share a:hover {
