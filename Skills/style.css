@@ -225,12 +225,12 @@
             flex-wrap: wrap;
             padding: 1rem 0;
         }
-        .share a {
-    height: 3rem;  /* Decreased height */
-    width: 3rem;   /* Decreased width */
+   .share a {
+    height: 2.5rem;  /* Decreased height */
+    width: 2.5rem;   /* Decreased width */
     padding: 0.5rem;  /* Adjusted padding */
     text-align: center;
-    border-radius: 3rem;  /* Adjusted border-radius */
+    border-radius: 2.5rem;  /* Adjusted border-radius */
     font-size: 1.5rem;  /* Adjusted font-size */
     margin-right: 0.5rem;  /* Adjusted margin-right */
     transition: .2s;
@@ -245,4 +245,5 @@
     border: .1rem solid rgb(180, 178, 178);
     color: #ffae00;
 }
+
 
