@@ -10,6 +10,11 @@
   text-transform:capitalize;
   transition: all .2s linear;
 }
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
 html{
   font-size: 62.5%;
   overflow-x: hidden;
