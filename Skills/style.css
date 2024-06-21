@@ -220,12 +220,12 @@
             padding-bottom: 0;
             overflow: hidden;
         }
- .footer .share {
+ .share {
             display: flex;
             flex-wrap: wrap;
             padding: 1rem 0;
         }
-        .footer .share a {
+        .share a {
             height: 4rem;
             width: 4rem;
             padding: 1rem;
@@ -238,7 +238,7 @@
             color: #02094b;
             border: none;
         }
-        .footer .share a:hover {
+        .share a:hover {
             background: transparent;
             transform: scale(0.98);
             border: .1rem solid rgb(180, 178, 178);
