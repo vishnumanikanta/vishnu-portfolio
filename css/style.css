@@ -1113,3 +1113,159 @@ li .profile_title {
     }
 }
 
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    body {
+        overflow: auto; /* Allow scrolling on smaller screens */
+    }
+
+    .website_container {
+        width: 95%;
+        height: auto;
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+
+    .website_container .sidebar_container {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .website_container .content_container {
+        width: 100%;
+        height: auto;
+        padding: 0.5rem;
+        overflow-y: auto;
+    }
+
+    .sidebar_container .sidebar_navigation {
+        font-size: 1.5rem;
+    }
+
+    .sidebar_container .sidebar_content h1 {
+        font-size: 1.5rem;
+    }
+
+    .sidebar_container .sidebar_content p {
+        font-size: 0.9rem;
+    }
+
+    .sidebar_container .sidebar_buttom_menu {
+        font-size: 1.4rem;
+    }
+
+    .background {
+        background-size: cover; /* Adjust background size for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar_container .sidebar_content h1 {
+        font-size: 1.2rem;
+    }
+
+    .sidebar_container .sidebar_content p {
+        font-size: 0.8rem;
+    }
+
+    .sidebar_container .sidebar_buttom_menu {
+        font-size: 1.2rem;
+    }
+
+    .background {
+        background-size: cover; /* Adjust background size for smaller devices */
+    }
+}
+
+@media (max-width: 480px) {
+    .website_container {
+        width: 100%;
+        padding: 0.2rem;
+    }
+
+    .website_container .content_container {
+        padding: 0.2rem;
+    }
+
+    .sidebar_container .sidebar_content h1 {
+        font-size: 1rem;
+    }
+
+    .sidebar_container .sidebar_content p {
+        font-size: 0.7rem;
+    }
+
+    .sidebar_container .sidebar_buttom_menu {
+        font-size: 1rem;
+    }
+
+    .resume_title,
+    .resume_box .resume_box_title,
+    .resume_box .resume_company,
+    .resume_box .resume_text {
+        font-size: 0.8rem;
+    }
+
+    .skill_box .skill_title {
+        font-size: 1rem;
+    }
+
+    .blogs_page .blogs_container {
+        margin: 0.2rem;
+    }
+
+    .blog_box .blog_title {
+        font-size: 1.2rem;
+    }
+
+    .blog_box .blog_text {
+        font-size: 0.8rem;
+    }
+
+    .services_box .services_title {
+        font-size: 1rem;
+    }
+
+    .services_box .services_text {
+        font-size: 0.8rem;
+    }
+
+    .background {
+        background-size: cover; /* Ensure background covers entire viewport */
+    }
+}
+@media (max-width: 768px) {
+    .rectangle {
+        width: 70px;
+        height: 70px;
+    }
+
+    .symbol {
+        font-size: 18px;
+    }
+
+    .triangle {
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 35px solid rgba(255, 255, 255, 0.2);
+    }
+}
+
+@media (max-width: 480px) {
+    .rectangle {
+        width: 50px;
+        height: 50px;
+    }
+
+    .symbol {
+        font-size: 14px;
+    }
+
+    .triangle {
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 26px solid rgba(255, 255, 255, 0.2);
+    }
+}
+
