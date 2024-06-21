@@ -368,10 +368,10 @@ body::-webkit-scrollbar {
     font-size: 3vw;
   }
   .footer_text {
-    font-size: 5vw;
+    font-size: 2vw;
   }
   #links p a {
-    font-size: 4vw;
+    font-size: vw;
     margin-left: 3vw;
   }
   #linkimg {
@@ -382,3 +382,61 @@ body::-webkit-scrollbar {
     width: 7vw;
   }
 }
+
+/* General styles outside of media queries */
+
+.footer {
+  background-color: #333; /* Default background color for footer */
+  color: white; /* Default text color */
+  padding: 20px; /* Padding around the footer content */
+}
+
+.footer_text {
+  font-size: 18px; /* Default font size for footer text */
+  margin: 8px 0; /* Default margin for footer text */
+}
+
+#links {
+  display: flex;
+  align-items: center;
+}
+
+#linkimg {
+  margin-left: auto;
+}
+
+#linkimg img {
+  height: 30px;
+  margin-left: 10px;
+}
+
+/* Media queries for responsiveness */
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 15px; /* Adjusted padding for smaller screens */
+  }
+
+  .footer_text {
+    font-size: 16px; /* Decreased font size for smaller screens */
+  }
+
+  #linkimg img {
+    height: 25px; /* Decreased height of link images for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer {
+    padding: 10px; /* Further adjusted padding for smallest screens */
+  }
+
+  .footer_text {
+    font-size: 14px; /* Further decreased font size for smallest screens */
+  }
+
+  #linkimg img {
+    height: 20px; /* Further decreased height of link images for smallest screens */
+  }
+}
+
