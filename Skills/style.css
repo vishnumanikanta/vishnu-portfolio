@@ -225,14 +225,14 @@
             flex-wrap: wrap;
             padding: 1rem 0;
         }
-   .share a {
-    height: 2.5rem;  /* Decreased height */
-    width: 2.5rem;   /* Decreased width */
-    padding: 0.5rem;  /* Adjusted padding */
+  .share a {
+    height: 2rem;  /* Decreased height */
+    width: 2rem;   /* Decreased width */
+    padding: 0.4rem;  /* Adjusted padding */
     text-align: center;
-    border-radius: 2.5rem;  /* Adjusted border-radius */
-    font-size: 1.5rem;  /* Adjusted font-size */
-    margin-right: 0.5rem;  /* Adjusted margin-right */
+    border-radius: 2rem;  /* Adjusted border-radius */
+    font-size: 1.2rem;  /* Adjusted font-size */
+    margin-right: 0.4rem;  /* Adjusted margin-right */
     transition: .2s;
     background: rgb(230, 230, 230);
     color: #02094b;
@@ -245,5 +245,6 @@
     border: .1rem solid rgb(180, 178, 178);
     color: #ffae00;
 }
+
 
 
