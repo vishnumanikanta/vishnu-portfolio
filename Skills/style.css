@@ -224,7 +224,8 @@
     display: flex;
     flex-wrap: wrap;
     padding: 1rem 0;
-    justify-content: flex-end; /* Align items to the right */
+    justify-content: flex-end; 
+  margin-right: 1rem;/* Align items to the right */
 }
 
 .share a {
