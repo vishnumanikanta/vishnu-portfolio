@@ -1269,38 +1269,3 @@ li .profile_title {
     }
 }
 
-/* General styling for the footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #1a1a1a;
-    color: #fff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Styling for the text inside the footer */
-footer p {
-    margin: 0;
-    font-size: 14px;
-}
-
-/* Styling for the visitor badge image */
-footer img {
-    vertical-align: middle;
-    margin-left: 10px;
-}
-
-/* Hover effect for the footer */
-footer:hover {
-    background-color: #333;
-}
-
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-    footer {
-        font-size: 12px;
-    }
-}
