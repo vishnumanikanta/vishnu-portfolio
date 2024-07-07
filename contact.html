@@ -194,14 +194,14 @@
             $('#pay_button').click(function () {
                 if (isMobile()) {
                     // Mobile UPI Intent
-                    const upiLink = "upi://pay?pa=your_upi_id@bank&pn=Vishnu&am=30&cu=INR&tn=Payment";
+                    const upiLink = "upi://pay?pa=nanivishnumanikanta@oksbi&pn=Vishnu&am=30&cu=INR&tn=Payment";
                     window.location.href = upiLink;
                 } else {
                     // Desktop QR Code
                     $('#qr_code_container').show();
                     const qr = new QRious({
                         element: document.getElementById('qr_code'),
-                        value: 'upi://pay?pa=your_upi_id@bank&pn=Vishnu&am=30&cu=INR&tn=Payment',
+                        value: 'upi://pay?pa=7660896926@ybl&pn=Vishnu&am=30&cu=INR&tn=Payment',
                         size: 200
                     });
                 }
