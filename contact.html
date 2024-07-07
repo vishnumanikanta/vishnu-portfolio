@@ -18,6 +18,47 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>Vishnu</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <style>
+        /* Centering container */
+        .center-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        /* Pay button styling */
+        #pay_button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        /* Hover effect */
+        #pay_button:hover {
+            background-color: #0056b3;
+        }
+
+        /* QR code container styling */
+        #qr_code_container {
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .line {
+            display: block;
+            height: 2px;
+            background-color: #000;
+            margin: 20px auto; /* Centering the line horizontally */
+            width: 50%; /* Adjust the width as needed */
+        }
+        
+    </style>
 </head>
 
 <body>
@@ -132,12 +173,45 @@
                         <textarea name="message" cols="30" rows="10" required placeholder="Enter Message"></textarea>
                         <input type="submit" value="Send" id="send_button">
                     </form>
+
+                    <!-- Payment Section -->
+                    <div class="center-container">
+                        <h2 class="title">Support Me</h2>
+                        <hr class="line">
+                        <button id="pay_button">Pay ₹30</button>
+                        <div id="qr_code_container" style="display: none;">
+                            <canvas id="qr_code"></canvas>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
     <script src="js/script.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#pay_button').click(function () {
+                if (isMobile()) {
+                    // Mobile UPI Intent
+                    const upiLink = "upi://pay?pa=your_upi_id@bank&pn=Vishnu&am=30&cu=INR&tn=Payment";
+                    window.location.href = upiLink;
+                } else {
+                    // Desktop QR Code
+                    $('#qr_code_container').show();
+                    const qr = new QRious({
+                        element: document.getElementById('qr_code'),
+                        value: 'upi://pay?pa=your_upi_id@bank&pn=Vishnu&am=30&cu=INR&tn=Payment',
+                        size: 200
+                    });
+                }
+            });
+        });
+
+        function isMobile() {
+            return /Mobi|Android/i.test(navigator.userAgent);
+        }
+    </script>
 </body>
 
 </html>
