@@ -18,7 +18,9 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>Vishnu</title>
-    
+</head>
+
+<body>
     <div class="background">
         <div class="rectangle"></div>
         <div class="rectangle"></div>
@@ -29,20 +31,15 @@
         <div class="triangle"></div>
         <div class="triangle"></div>
         <div class="triangle"></div>
-<!-- Moving Symbols -->
-    <div class="symbol">★</div>
-    <div class="symbol">✿</div>
-    <div class="symbol">❖</div>
-    <div class="symbol">✧</div>
-    <div class="symbol">✪</div>
-    <div class="symbol">✦</div>
-
-
+        <!-- Moving Symbols -->
+        <div class="symbol">★</div>
+        <div class="symbol">✿</div>
+        <div class="symbol">❖</div>
+        <div class="symbol">✧</div>
+        <div class="symbol">✪</div>
+        <div class="symbol">✦</div>
     </div>
 
-</head>
-
-<body>
     <!-- Website Layout -->
     <div class="website_container">
 
@@ -60,7 +57,7 @@
                 <li><a href="blogs.html"><i class="fas fa-pen-nib"></i> Blogs</a></li>
                 <li><a href="services.html"><i class="fas fa-cog"></i> Services</a></li>
                 <li><a href="contact.html"><i class="fas fa-phone-square"></i> Contact</a></li>
-                <li><a href="./Projects/portfolio.html">portfolio</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
             </div>
         </ul>
 
@@ -82,12 +79,10 @@
                 <p>Software Developer</p>
                 <!-- Social Medias -->
                 <div class="social_media">
-                    
                     <a href="https://www.linkedin.com/in/v-vishnu-manikanta-9293b9299/"><i class="fa-brands fa-linkedin"></i></a>
                     <a href=""><i class="fab fa-instagram"></i></a>
                     <a href=""><i class="fab fa-facebook"></i></a>
                     <a href="https://www.youtube.com/channel/UCU2NtuydgYDOyxy6le95D2w"><i class="fa-brands fa-youtube"></i></a>
-                 
                 </div>
             </div>
 
@@ -103,11 +98,10 @@
                 <li><a href="blogs.html">Blogs</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
-                <li><a href="./Projects/portfolio.html">portfolio</a></li>
-
+                <li><a href="portfolio.html">Portfolio</a></li>
             </ul>
-
         </div>
+
         <!-- content -->
         <div class="content_container">
             <!-- Contact Page -->
@@ -115,32 +109,33 @@
                 <h2 class="title">Contact <span>Me</span></h2>
                 <hr class="line">
                 <div class="contact_container">
-                    <form action="post">
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="c5a771ae-cc5d-4e9f-9c9a-957cd2c9560d">
+
                         <div class="form_name_row">
                             <div class="left_form_row">
                                 <label>First Name</label>
-                                <input type="text" required placeholder="Enter First Name">
+                                <input type="text" name="first_name" required placeholder="Enter First Name">
                             </div>
                             <div class="right_form_row">
                                 <label>Last Name</label>
-                                <input type="text" required placeholder="Enter Last Name">
+                                <input type="text" name="last_name" required placeholder="Enter Last Name">
                             </div>
                         </div>
                         <label>Email</label>
-                        <input type="email" name="" id="" required placeholder="Enter Email">
+                        <input type="email" name="email" required placeholder="Enter Email">
                         <label>Phone Number</label>
-                        <input type="text" name="" id="" required placeholder="Enter Phone Number">
+                        <input type="text" name="phone" required placeholder="Enter Phone Number">
                         <label>Subject</label>
-                        <input type="text" name="" id="" required placeholder="Enter Subject">
+                        <input type="text" name="subject" required placeholder="Enter Subject">
                         <label>Message</label>
-                        <textarea name="" id="" cols="30" rows="10" required placeholder="Enter Message"></textarea>
+                        <textarea name="message" cols="30" rows="10" required placeholder="Enter Message"></textarea>
                         <input type="submit" value="Send" id="send_button">
                     </form>
                 </div>
             </div>
         </div>
     </div>
-
 
     <script src="js/script.js"></script>
 </body>
