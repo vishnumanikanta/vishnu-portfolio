@@ -57,7 +57,6 @@
             margin: 20px auto; /* Centering the line horizontally */
             width: 50%; /* Adjust the width as needed */
         }
-        
     </style>
 </head>
 
@@ -98,7 +97,7 @@
                 <li><a href="blogs.html"><i class="fas fa-pen-nib"></i> Blogs</a></li>
                 <li><a href="services.html"><i class="fas fa-cog"></i> Services</a></li>
                 <li><a href="contact.html"><i class="fas fa-phone-square"></i> Contact</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="./Projects/portfolio.html">Portfolio</a></li>
             </div>
         </ul>
 
@@ -139,7 +138,7 @@
                 <li><a href="blogs.html">Blogs</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="./Projects/portfolio.html">Portfolio</a></li>
             </ul>
         </div>
 
@@ -192,22 +191,23 @@
     <script>
         $(document).ready(function () {
             $('#pay_button').click(function () {
-                const upiID = 'nanivishnumanikanta@oksbi';
-                const payeeName = 'Vishnu';
-                const amount = '30';
-                const currency = 'INR';
-                const transactionNote = 'Payment';
+                const upiId = "7660896926@ybl";
+                const name = "Vishnu";
+                const amount = 30;
+                const currency = "INR";
+                const note = "Payment";
+
+                const upiLink = `upi://pay?pa=${upiId}&pn=${name}&am=${amount}&cu=${currency}&tn=${note}`;
 
                 if (isMobile()) {
                     // Mobile UPI Intent
-                    const upiLink = `upi://pay?pa=${upiID}&pn=${payeeName}&am=${amount}&cu=${currency}&tn=${transactionNote}`;
                     window.location.href = upiLink;
                 } else {
                     // Desktop QR Code
                     $('#qr_code_container').show();
                     const qr = new QRious({
                         element: document.getElementById('qr_code'),
-                        value: `upi://pay?pa=${upiID}&pn=${payeeName}&am=${amount}&cu=${currency}&tn=${transactionNote}`,
+                        value: upiLink,
                         size: 200
                     });
                 }
