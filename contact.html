@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="img/profile.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="img/nv.jpeg" type="image/x-icon">
 
     <!-- Fontawesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -98,7 +98,7 @@
                 <li><a href="blogs.html"><i class="fas fa-pen-nib"></i> Blogs</a></li>
                 <li><a href="services.html"><i class="fas fa-cog"></i> Services</a></li>
                 <li><a href="contact.html"><i class="fas fa-phone-square"></i> Contact</a></li>
-                <li><a href="./Projects/portfolio.html">Portfolio</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
             </div>
         </ul>
 
@@ -139,7 +139,7 @@
                 <li><a href="blogs.html">Blogs</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
-                <li><a href="./Projects/portfolio.html">Portfolio</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
             </ul>
         </div>
 
@@ -192,16 +192,22 @@
     <script>
         $(document).ready(function () {
             $('#pay_button').click(function () {
+                const upiID = 'nanivishnumanikanta@oksbi';
+                const payeeName = 'Vishnu';
+                const amount = '30';
+                const currency = 'INR';
+                const transactionNote = 'Payment';
+
                 if (isMobile()) {
                     // Mobile UPI Intent
-                    const upiLink = "upi://pay?pa=nanivishnumanikanta@oksbi&pn=Vishnu&am=30&cu=INR&tn=Payment";
+                    const upiLink = `upi://pay?pa=${upiID}&pn=${payeeName}&am=${amount}&cu=${currency}&tn=${transactionNote}`;
                     window.location.href = upiLink;
                 } else {
                     // Desktop QR Code
                     $('#qr_code_container').show();
                     const qr = new QRious({
                         element: document.getElementById('qr_code'),
-                        value: 'upi://pay?pa=7660896926@ybl&pn=Vishnu&am=30&cu=INR&tn=Payment',
+                        value: `upi://pay?pa=${upiID}&pn=${payeeName}&am=${amount}&cu=${currency}&tn=${transactionNote}`,
                         size: 200
                     });
                 }
