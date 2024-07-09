@@ -199,7 +199,7 @@
                         <div id="qr_code_container" style="display: none;">
                             <canvas id="qr_code"></canvas>
                             <br>
-                            <button id="scan_button">Scan QR Code</button>
+                            <button id="scan_button">Scan QR Code with Google Lens</button>
                         </div>
                     </div>
                 </div>
@@ -219,34 +219,21 @@
 
                 const upiLink = `upi://pay?pa=${upiId}&pn=${name}&am=${amount}&cu=${currency}&tn=${note}`;
 
-                if (isMobile()) {
-                    $('#qr_code_container').show();
-                    const qr = new QRious({
-                        element: document.getElementById('qr_code'),
-                        value: upiLink,
-                        size: 200
-                    });
-                } else {
-                    window.location.href = upiLink;
-                }
+                $('#qr_code_container').show();
+                const qr = new QRious({
+                    element: document.getElementById('qr_code'),
+                    value: upiLink,
+                    size: 200
+                });
             });
 
             $('#scan_button').click(function () {
-                const upiId = "7660896926@ybl";
-                const name = "Vishnu";
-                const amount = 30;
-                const currency = "INR";
-                const note = "Payment";
-
-                const upiLink = `upi://pay?pa=${upiId}&pn=${name}&am=${amount}&cu=${currency}&tn=${note}`;
+                // Replace with your UPI link for scanning
+                const upiLink = "upi://scan";
 
                 window.location.href = upiLink;
             });
         });
-
-        function isMobile() {
-            return /Mobi|Android/i.test(navigator.userAgent);
-        }
     </script>
 </body>
 
