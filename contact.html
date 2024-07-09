@@ -44,12 +44,6 @@
             background-color: #0056b3;
         }
 
-        /* QR code container styling */
-        #qr_code_container {
-            margin: 20px auto;
-            text-align: center;
-        }
-
         .line {
             display: block;
             height: 2px;
@@ -178,42 +172,30 @@
                         <h2 class="title">Support Me</h2>
                         <hr class="line">
                         <button id="pay_button">Pay ₹30</button>
-                        <div id="qr_code_container" style="display: none;">
-                            <canvas id="qr_code"></canvas>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="js/script.js"></script>
     <script>
-        $(document).ready(function () {
-            $('#pay_button').click(function () {
-                const upiId = "7660896926@ybl";
-                const name = "Vishnu";
-                const amount = 30;
-                const currency = "INR";
-                const note = "Payment";
+        document.getElementById('pay_button').onclick = function () {
+            const upiId = "7660896926@ybl";
+            const name = "Vishnu";
+            const amount = 30;
+            const currency = "INR";
+            const note = "Payment";
 
-                const upiLink = `upi://pay?pa=${upiId}&pn=${name}&am=${amount}&cu=${currency}&tn=${note}`;
+            const upiLink = `upi://pay?pa=${upiId}&pn=${name}&am=${amount}&cu=${currency}&tn=${note}`;
 
-                if (isMobile()) {
-                    window.location.href = upiLink;
-                } else {
-                    $('#qr_code_container').show();
-                    const qr = new QRious({
-                        element: document.getElementById('qr_code'),
-                        value: upiLink,
-                        size: 200
-                    });
-                }
-            });
-        });
-
-        function isMobile() {
-            return /Mobi|Android/i.test(navigator.userAgent);
+            // Check if the device is mobile
+            if (/Mobi|Android/i.test(navigator.userAgent)) {
+                // Redirect to UPI app
+                window.location.href = upiLink;
+            } else {
+                // Handle non-mobile devices if necessary
+                alert('Please use a mobile device to complete the payment.');
+            }
         }
     </script>
 </body>
