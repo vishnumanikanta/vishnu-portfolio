@@ -199,7 +199,7 @@
                         <div id="qr_code_container" style="display: none;">
                             <canvas id="qr_code"></canvas>
                             <br>
-                            <button id="scan_button">Scan QR Code with Google Lens</button>
+                            <button id="scan_button">Scan QR Code with PhonePe</button>
                         </div>
                     </div>
                 </div>
@@ -228,10 +228,13 @@
             });
 
             $('#scan_button').click(function () {
-                // Replace with your UPI link for scanning
-                const upiLink = "upi://scan";
+                // Provide instructions to users on how to scan the QR code with PhonePe app
+                alert("Please open the PhonePe app and scan the QR code displayed on the screen.");
 
-                window.location.href = upiLink;
+                // If you have a specific link for scanning with PhonePe, you can redirect the user to that link.
+                // Example: window.location.href = "your-specific-scan-link";
+
+                // Alternatively, instruct users to use the PhonePe app manually.
             });
         });
     </script>
