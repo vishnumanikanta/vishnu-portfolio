@@ -200,8 +200,7 @@
                 const upiLink = `upi://pay?pa=${upiId}&pn=${name}&am=${amount}&cu=${currency}&tn=${note}`;
 
                 if (isMobile()) {
-                    const gpayLink = `https://pay.google.com/gp/p/ui/pay?pa=${upiId}&pn=${name}&am=${amount}&cu=${currency}&tn=${note}`;
-                    window.location.href = gpayLink;
+                    window.location.href = upiLink;
                 } else {
                     $('#qr_code_container').show();
                     const qr = new QRious({
