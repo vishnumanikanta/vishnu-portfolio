@@ -198,10 +198,9 @@
                 const note = "Payment";
 
                 const upiLink = `upi://pay?pa=${upiId}&pn=${name}&am=${amount}&cu=${currency}&tn=${note}`;
-                const phonePeLink = `intent://pay?pa=${upiId}&pn=${name}&am=${amount}&cu=${currency}&tn=${note}#Intent;scheme=upi;package=com.phonepe.app;end`;
 
                 if (isMobile()) {
-                    window.location.href = phonePeLink;
+                    window.location.href = upiLink;
                 } else {
                     $('#qr_code_container').show();
                     const qr = new QRious({
